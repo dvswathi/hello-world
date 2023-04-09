@@ -14,7 +14,7 @@ pipeline{
         steps{
         sh "mvn clean package"
         sh "mvn install"
-        sh "cp target/*.war target/myweb.war"
+        sh  mv "/var/lib/jenkins/workspace/deptom/webapp/target/webapp.war /var/lib/jenkins/workspace/deptom/webapp/target/myweb.war"
         }
         }
      stage("deploy")
